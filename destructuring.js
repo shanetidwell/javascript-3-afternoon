@@ -21,7 +21,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+var{color,make,model,year}= carDetails;
 
 
 
@@ -35,6 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  var{title,firstName,lastName}=obj;
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -54,6 +55,10 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation(obj){
+  var{utah,california, texas, arizona} = obj;
+  return utah + california + texas + arizona;
+}
 
 
 
@@ -68,6 +73,11 @@ function greeting( obj ) {
 */
 
 //Code Here
+function ingredients(obj){
+  var{carb, fat, protein} = obj;
+  var arr = [carb, fat, protein];
+  return arr;
+}
 
 
 
@@ -86,6 +96,15 @@ function greeting( obj ) {
 */
 
 //Code Here
+function largeNumbers({first, second, third}){
+  var smallest = first;
+  if (second < smallest){
+    smallest = second
+  }else if(third<smallest){
+    smallest = third;
+  }
+  return smallest;
+}
 
 
 
@@ -98,5 +117,14 @@ function greeting( obj ) {
 */
 
 //Code Here
+function numberGroups({a,b,c}){
+  var longestArray = a;
+  if (b.length > longestArray.length){
+    longestArray = b;
+  }else if(c.length>longestArray.length){
+    longestArray = c;
+  }
+  return longestArray;
+}
 
 
